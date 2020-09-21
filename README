@@ -2,7 +2,7 @@ quizbot
 =======
 
 ------------------------------------------------------------------------------------------------
-Small and simple quizbot for IRC, builds upon https://github.com/plaimi/q/blob/master/q
+quizbot for IRC
 ------------------------------------------------------------------------------------------------
 
 
@@ -91,15 +91,6 @@ You should have received a copy of the GNU General Public License
 along with quizbot.  If not, see <http://www.gnu.org/licenses/>.
 
 
-Original Author
-===============================================
-Alexander Berntsen <alexander@plaimi.net>
-===============================================
-
-Plagiarizer:
-===============================================
-Nikhil Kshirsagar <nkshirsa@redhat.com>
-===============================================
 
 To get the bot working, you might need to do all this:
 pip install colorama
