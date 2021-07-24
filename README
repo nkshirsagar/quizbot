@@ -1,0 +1,97 @@
+quizbot
+=======
+
+quizbot is an IRC quiz bot, used for online quizzes and fun+learning activities. The bot also can make basic converation.
+It's a combination of two components, both of which have been significantly enhanced by me.
+
+------------------------------------------------------------------------------------------------
+quizbot builds upon a skeleton quizbot at https://github.com/plaimi/q/blob/master/q
+The chat component is a much enhanced version of https://github.com/jezhiggins/eliza.py
+------------------------------------------------------------------------------------------------
+
+
+Use
+===
+
+Hack config.py. 
+questions are in questions.py, as per the format. 
+
+Start the bot with:
+	$ ./q
+or:
+	$ python q
+
+
+Dependencies
+============
+
+quizbot is written in Python and runs on the 2.7 interpreter. The dependencies 
+below are listed with the oldest versions that are confirmed to work. Older 
+versions *might* work. 
+
+-python 2.7.x
+-twisted >= 11.0.0
+-twisted-words >= 11.0.0
+
+A Note on Python 3
+------------------
+
+The 3.x interpreter will try to run this and fail. You *need* to use a 2.x 
+interpreter (2.7.x is the only one with which quizbot is formally tested). 
+This may be accomplished by specifically invoking a 2.x interpreter on some 
+systems.
+        $ python2 q
+
+
+Contributing To the Project
+===========================
+
+Yes, please. 
+
+quiz -
+- Improve the way question-answer pairs are stored. (Please provide code to
+  convert the current structure for me to test it.)
+- Write better algorithms for detecting answers.
+- Make quizbot reconnect correctly when it loses its IRC connection.
+- Allow submitting questions to the bot itself
+- Allow only one answer per quizzer.
+
+chats -
+- More than a single line responses from the bot
+- Initiate converations instead of just responding
+- More and more regexes , because they lead to less duplication of responses.
+
+Try to keep the source very short. Please take some time to come up with the
+shortest readable and logical solution to what you are trying to do. 
+
+Send me a pull-request using Github or an email to nkshirsagar@gmail.com
+
+Happy hacking!
+
+Licensing and Legalese
+======================
+
+quizbot is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+quizbot is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with quizbot.  If not, see <http://www.gnu.org/licenses/>.
+
+To get the bot working, you might need to do all this:
+pip install colorama
+pip install termcolor
+pip install pyfiglet
+yum install python27-python-pip -y
+pip install --upgrade pip
+pip install twisted
+yum install python2-devel
+might need to change include path to get twisted to compile and find python.h
+
+/* vim: set textwidth=78 formatoptions=actw2 autoindent: */
