@@ -95,3 +95,42 @@ yum install python2-devel
 might need to change include path to get twisted to compile and find python.h
 
 /* vim: set textwidth=78 formatoptions=actw2 autoindent: */
+
+
+--------------
+
+get it working this way on non RH distros:
+
+yum install python3-virtualenv (or yum equivalent)
+just get python3-virtualenv somehow
+yum install python27-python-pip -y
+(get pip)
+pip install --upgrade pip
+yum install python2-devel
+cd to base directory of code 
+virtualenv --python=/usr/bin/python2 venv
+pip install -r requirements.txt (see below)
+source venv/bin/activate
+./q
+
+----
+
+have this in requirements.txt
+
+root@nikhil-Latitude-5490:/home/nikhil/Downloads/quizbot# cat requirements.txt 
+attrs==21.2.0
+Automat==20.2.0
+colorama==0.4.4
+constantly==15.1.0
+hyperlink==21.0.0
+idna==2.10
+incremental==21.3.0
+pyfiglet==0.8.post1
+PyHamcrest==1.10.1
+six==1.16.0
+termcolor==1.1.0
+Twisted==20.3.0
+typing==3.10.0.0
+zope.interface==5.4.0
+
+
